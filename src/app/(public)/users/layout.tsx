@@ -17,21 +17,17 @@ export const metadata: Metadata = {
 };
 
 
-export default function AboutLayout({
-                                       children,
-                                   }: Readonly<{
+export default function UsersLayout({
+                                        children,
+                                    }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div>
-            <hr/>
-            About Layout
             {children}
-            <hr/>
         </div>
-
         </body>
         </html>
     );
