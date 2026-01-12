@@ -8,6 +8,7 @@ export default function Home() {
             <input type="text" name={'brand'}/>
             <input type="number" name={'price'}/>
             <input type="number" name={'year'}/>
+            <button>submit</button>
         </Form>
     </div>
   );
