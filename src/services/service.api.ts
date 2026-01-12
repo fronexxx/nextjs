@@ -9,13 +9,13 @@ export const getAllCars = async (): Promise<ICar[]> => {
 };
 
 type Cars = { brand: string, price: number, year: number };
-export const createCars = async (data: Cars) => {
+export const createCar = async (data: Cars) => {
     await fetch(BASE_URL + '/cars', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data),
     });
     revalidatePath('/cars')
-}
+};
 
 
