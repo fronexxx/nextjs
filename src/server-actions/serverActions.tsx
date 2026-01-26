@@ -20,3 +20,5 @@ type Meal = { id: number, title: string };
 export const getMeals = async (): Promise<Meal[]> => {
     return db.prepare<Meal[]>('select * from meals').all() as Meal[];
 }
+
+
