@@ -8,6 +8,7 @@ const db = sql('meals.db');
 export const saveMeal = async (formData: FormData) => {
     // console.log('saveActions')
     // console.log(formData)
+    // console.log(formData)
 
     const titleValue = formData.get('title');
 
