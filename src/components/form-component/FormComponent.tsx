@@ -15,15 +15,11 @@ interface IFormProps {
 
 const FormComponent = () => {
 
-    const {handleSubmit, register, formState: {errors, isValid}} = useForm<IFormProps>({mode: 'all', resolver: joiResolver(carValidator)});
-
-    const handler = handleSubmit((formDataProps: IFormProps) => {
-        console.log(formDataProps);
-    });
+    const {register, formState: {errors, isValid}} = useForm<IFormProps>({mode: 'all', resolver: joiResolver(carValidator)});
 
     return (
         <div>
-            <Form onSubmit={handler} action={createCarActions}>
+            <Form action={createCarActions}>
                 <label>
                     <input type="text" {...register('brand')} placeholder={'brand'}/>
                     {errors.brand && <div>{errors.brand.message}</div>}
